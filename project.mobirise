@@ -1,0 +1,146 @@
+{
+  "settings": {
+    "name": "getgemss",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.4,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.9.18",
+    "siteFonts": [],
+    "favicon": "@PROJECT_PATH@/assets/images/getgems-favicon.png",
+    "robotsSwitcher": true,
+    "robotsText": "User-agent: *\nDisallow: /cgi-bin\nSitemap: https://getgemss.github.io/sitemap.xml/\n",
+    "sitemapSwitcher": true,
+    "siteUrl": "https://getgemss.github.io/",
+    "sitemapSwitcherAuto": "on",
+    "imageResize": false,
+    "usedWebp": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 2,
+    "versionPublish": "5.9.18"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Getgems - The Open Network (TON) NFT Marketplace",
+        "meta_descr": "Mint, buy, and sell NFTs with ultra-low fees, seamless Telegram integration, and creator-friendly tools. Explore top collections and join the TON Web3 revolution.",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@bgColor",
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "img": {
+              "object-fit": "contain",
+              "border-radius": "0 !important"
+            }
+          },
+          "_name": "image04",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image03\" group=\"Image & Video\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Caption\" name=\"showText\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n\n    <div class=\"image-block m-auto\">\n        <a href=\"https://getgems.io/\"><img src=\"@PROJECT_PATH@/assets/images/getgems.png\" alt=\"Getgems\"></a>\n        <div mbr-if=\"showText\">\n            <p class=\"mbr-text mt-4 pb-4 align-center mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                Unlock your true path!\n            </p>\n        </div>\n    </div>\n</section>",
+          "_cid": "uPdKMH6Gkc",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "image04-0"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor",
+              "@media (max-width: 767px)": {
+                "padding": "2rem 1.5rem"
+              },
+              "@media (min-width: 768px) and (max-width: 991px)": {
+                "padding": "2.25rem"
+              },
+              "@media (min-width: 992px)": {
+                "padding": "4rem"
+              }
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#000000"
+            }
+          },
+          "_name": "article07",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article07\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"10\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\">\n            <b><a href=\"https://getgems.io/\" class=\"text-primary\">Getgems</a> - The Open Network (TON) NFT Marketplace</b></h3>\n          <div class=\"row card-box align-left\">\n            \n            \n            \n            <div class=\"item features-without-image col-12 active\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Exploring <a href=\"https://getgems.io/\" class=\"text-primary\">GetGems</a>: TON’s Trailblazing NFT Marketplace</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">In the ever-expanding landscape of NFTs, GetGems stands as the prominent marketplace powering the TON (The Open Network) ecosystem.  Launched as a user-friendly platform designed for creators, collectors, and mass engagement via Telegram, GetGems is reshaping how digital assets are minted, traded, and discovered on-chain.<br> 📌 What Is GetGems?<br> NFT Marketplace based on TON As the first major NFT platform built on TON, GetGems enables users to mint, buy, and sell NFTs using Toncoin (TON) directly, leveraging the blockchain’s speed and low transaction costs <br><br> Support for both compressed and standard NFTs <a href=\"https://getgemss.github.io/\" class=\"text-primary\">Getgems</a> supports both traditional NFTs and cNFTs, or compressed NFTs. cNFTs are lightweight, scalable tokens that dramatically reduce gas and storage expenses for large collections <br><br> 💡 Key Features at a Glance<br> Efficiency &amp; Affordability<br> Enjoy near-zero gas fees and seamless transactions thanks to TON’s high-performance blockchain .<br> Creator-Centric Tools<br> Artists can mint artworks, set royalty percentages for secondary sales, organize collections, and manage metadata—all without writing a single line of code <br><br> Robust Marketplace Experience<br> Filter NFTs by price, rarity, popularity, and more.  Place bids or make direct purchases while viewing dynamic collection stats like floor price and trading volume <br><br> Wallet-Friendly Integration<br> Compatible with TON wallets such as Tonkeeper, Tonhub, and OpenMask, making wallet setup, Toncoin funding, and transactions smooth—even on mobile devices <br><br> Strong ecosystem and community Active support via Telegram and Discord, creator campaigns, seasonal drops, and collaborations with DeFi and gaming projects foster vibrant engagement and deepen adoption <br><br> 🛠️ Using <a href=\"https://getgems.io/\" class=\"text-primary\">GetGems</a>: A Quick Guide<br> Tonkeeper or Tonhub can be used to set up your TON wallet. Fund your wallet via exchanges like OKX or MEXC and transfer Toncoin <br><br> Connect your wallet on <a href=\"https://getgemss.github.io/\" class=\"text-primary\">Getgems</a> via the \"Connect Wallet\" button.<br> Explore or mint NFTs—choose existing collections or create your own with custom metadata and royalty settings <br><br> List NFTs for sale by setting prices in TON and paying a modest 5% commission, while gas costs remain minimal .<br> 🚀 Scaling with cNFTs<br> Compressed NFTs, or cNFTs, are a cornerstone of <a href=\"https://getgemss.github.io/\" class=\"text-primary\">GetGems</a> scalability strategy.  Without sacrificing metadata integrity or royalty automation, they enable creators to mint thousands of tokens at a reasonable cost—ideal for projects like the PFP series or in-game items.&nbsp;<br><br> 🔗 The Telegram Connection &amp; Mainstream Drive<br> With Telegram’s integration—210M+ users globally—GetGems sees a massive opportunity for mainstream NFT adoption <br><br> Features like Telegram Gifts turned on-chain as NFTs and sticker drops (e.g., Flappy Bird tokenized stickers) are bringing collectible experiences directly into chats, creating fresh utility and market vibrancy (pre-mint volumes hitting millions) <br><br> 🏆 What Sets <a href=\"https://getgems.io/\" class=\"text-primary\">GetGems</a> Apart?<br> End-to-End TON Ecosystem: From wallets to smart contracts, everything is natively TON-built, not ported from other chains.<br> Beginner-Friendly Design: Simple minting wizards, wallet integrations, and mobile optimization help onboard crypto-curious users swiftly <br><br> Empowerment of the Creator: Long-term creative viability is supported by low fees, substantial royalties, collection tools, and verification programs. Active Community &amp; Growth: Featured drops, contests, and organic support channels foster a loyal, engaged ecosystem <br><br> Future and Prospects The roadmap is ambitious: mobile app launch, enhanced analytics, creator verification, NFT launchpad, and integration with gaming and DeFi.  By enabling access-gated content, undercollateralized utility, and deeper analytic insights, GetGems aims to become the TON NFT hub for creators and projects of all scales <br><br> ✅ Final Take<br> <a href=\"https://getgems.io/\" class=\"text-primary\">GetGems</a> is more than just an NFT marketplace—it’s a gateway to the TON ecosystem, bringing affordability, simplicity, and scale to creators and collectors alike.  With its Telegram synergy and position as a mass-adoption battleground, it’s poised to be the centerpiece of TON’s Web3 future.<br> Whether you’re an artist, gamer, or a Web3 newbie, <a href=\"https://getgemss.github.io/\" class=\"text-primary\">GetGems</a> offers a polished, accessible path into NFTs.  Dive in, mint your first cNFT, trade a sticker drop, or follow a creator—welcome to the diamond mine on TON.</p>\n              </div>\n            </div>\n          </div>\n          <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "uPdKNeXKMs",
+          "_anchor": "article07-1",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
